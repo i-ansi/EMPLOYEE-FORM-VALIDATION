@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Input Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- form container -->
+        <div class="form-box">
+            <!-- dots -->
+            <div class="row">
+                <span class="dot" id="red"></span>
+                <span class="dot" id="yellow"></span>
+                <span class="dot" id="green"></span>
+            </div>
+            <br>
+            <!-- title -->
+            <div class="row">
+                <span id="arrow">
+                    <h1>&gt;</h1>
+                </span> &nbsp;&nbsp;
+
+                <span>
+                    <h2 id="title"> Employee Input Form
+                </span>
+                <span id="color">_</span> &nbsp;&nbsp;
+            </div>
+            <!-- form -->
+            <div class="form">
+                <form name="empform" method="post" id="myform" onsubmit="return false">
+                    <div class="row">
+
+                        <label for="firstname" id="label">First Name :</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" id="first-name" name="firstname" placeholder="First Name" autofocus>
+                        <span id="f-er"> Digits/whitespace not allowed!</span>
+                        <span id="f-req"> Field Required*</span>
+                    </div>
+                    <div class="row">
+                        <label for="secondname" id="label">Last Name :</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" id="second-name" name="secondname" placeholder="Last Name">
+                        <span id="l-er"> Digits/whitespace not allowed!</span>
+                        <span id="l-req"> Field Required*</span>
+                    </div>
+
+                    <div class="row">
+                        <span id="style">Gender :
+                        </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="male" name="gender" value="Male">
+                        <label for="male">&nbsp;&nbsp;Male</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="female" name="gender" value="Female">
+                        <label for="female">&nbsp;&nbsp;Female</label>
+                        <span id="g-req"> Field Required*</span>
+                    </div>
+
+
+                    <br>
+                    <div class="row">
+                        <span id="style">Marital Status :
+
+                        </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="married" name="marital" value="Married" onclick="maritalStatus()">
+                        <label for="married">&nbsp;&nbsp;Married</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="unmarried" name="marital" value="Unmarried" onclick="maritalStatus()">
+                        <label for="unmarried">&nbsp;&nbsp;Unmarried</label>
+                        <span id="m-req"> Field Required*</span>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <label for="spousename" id="label">Spouse Name
+                            :</label>
+                        <input type="text" id="spouse-name" name="spousename" placeholder="Spouse Name" disabled>
+                        <span id="s-er"> Digits/whitespace not allowed!</span>
+                        <span id="s-req"> Field Required*</span>
+                    </div>
+                    <div class="row">
+                        <label for="description" id="label">Description :</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text-area" id="description" name="description" placeholder="Description">
+                        <span id="d-req"> Field Required*</span>
+                    </div>
+                    <label id="col">
+                        <input type="checkbox" id="check" name="remember"> I accept all Terms/Conditions.
+                        <span id="c-req"> Field Required*</span>
+                    </label>
+                    <br><br>
+                    <div class="row">
+                        <input type="button" value="Reset" id="btn" onclick="resetForm()" />
+                        <input type="submit" value="Submit" id="btn" onclick="return validateForm()" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
